@@ -45,7 +45,7 @@ public class Main {
             System.out.println(villArr[villager].getName() + " ma jeszcze: " +
                     villArr[villager].getHealth()
                     + " punktow zycia");
-            System.out.println("Potwory posiadaja jeszcze: " + Monsters.monstersHealth +
+            System.out.println("Potwory posiadaja jeszcze " + Monsters.monstersHealth +
                     " punktow zycia");
             System.out.println();
         }
