@@ -1,7 +1,5 @@
 package lab9;
 
-import java.util.HashMap;
-import java.util.Map;
 import java.util.Random;
 import java.util.stream.Stream;
 
@@ -36,14 +34,10 @@ public class Main {
             villager = chooseVillager(villArr);
             attackingMonster = chooseMonster();
             
-            System.out.println("Aktualnie walczacy osadnik: " +
+            System.out.println("Aktualnie walczacy osadnik to " +
                     villArr[villager].getName());
 
             villArr[villager].attack(chooseMonster());
-
-            System.out.println(villArr[villager].getName() + " zadal/a "
-                    + villArr[villager].getDamage()
-                    + " punktow obrazen");
 
             
             attackingMonster.attack(villArr[villager]);
@@ -58,7 +52,8 @@ public class Main {
 
         System.out.println("Obozowisko ocalone!\nprzetrwali: ");
         for (Villager v : villArr) {
-            System.out.println(v.getName() + " ma " + v.getHealth() + " punktow zycia");
+            if(v.getHealth() != 0)
+                System.out.println(v.getName() + " ma " + v.getHealth() + " punktow zycia");
         }
 
         villArr[1] = (ExtraordinaryVillager) objectAkara;
