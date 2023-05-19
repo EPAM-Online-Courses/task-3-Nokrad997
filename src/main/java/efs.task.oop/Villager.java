@@ -11,7 +11,7 @@ public class Villager implements Fighter{
     }
 
     public void sayHello() {
-        System.out.print("Greetings traveler... I'm " + this.name + " and I'm " + this.age + " years old");
+        System.out.println("Greetings traveler... I'm " + this.name + " and I'm " + this.age + " years old");
     }
 
     public String getName() {
