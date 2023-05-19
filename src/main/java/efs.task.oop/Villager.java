@@ -4,16 +4,14 @@ public class Villager implements Fighter{
     protected String name;
     protected int age;
     protected int health = 100;
-    protected int damage;
     
     public Villager(String name, int age) {
         this.name = name;
         this.age = age;
-        damage = (int)(100 - age * 0.5) / 10;
     }
 
     public void sayHello() {
-        System.out.println("Greetings traveler... I am " + this.name + " and I'm " + this.age + " years old.");
+        System.out.print("Greetings traveler... I'm " + this.name + " and I'm " + this.age + " years old");
     }
 
     public String getName() {
@@ -26,10 +24,6 @@ public class Villager implements Fighter{
 
     public int getHealth() {
         return this.health;
-    }
-
-    public int getDamage() {
-        return this.damage;
     }
 
     public void setHealth(int health) {

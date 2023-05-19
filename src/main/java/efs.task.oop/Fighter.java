@@ -1,4 +1,4 @@
-package lab9;
+package efs.task.oop;
 
 public interface Fighter {
     public void attack(Fighter victim);

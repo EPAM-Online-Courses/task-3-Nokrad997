@@ -1,4 +1,4 @@
-package lab9;
+package efs.task.oop;
 
 import java.util.Random;
 import java.util.stream.Stream;

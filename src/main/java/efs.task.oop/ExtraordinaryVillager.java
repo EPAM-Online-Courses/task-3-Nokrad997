@@ -1,4 +1,4 @@
-package lab9;
+package efs.task.oop;
 
 public class ExtraordinaryVillager extends Villager {
     public enum Skill {
@@ -17,16 +17,15 @@ public class ExtraordinaryVillager extends Villager {
     }
 
     private Skill skill;
-    private int damage = 0;
 
-    public ExtraordinaryVillager(String name, Integer age, Skill skill) {
+    public ExtraordinaryVillager(String name, int age, Skill skill) {
         super(name, age);
         this.skill = skill;
     }
 
     @Override
     public void sayHello() {
-        System.out.println("Greetings traveler... I am " + this.name + " and I'm " + this.age + " years old. "
+        System.out.println("Greetings traveler... I'm " + this.name + " and I'm " + this.age + " years old"
                 + this.skill.getDescription());
     }
 
@@ -36,16 +35,11 @@ public class ExtraordinaryVillager extends Villager {
 
     @Override
     public void attack(Fighter victim) {
-        victim.takeHit(damage);
+        victim.takeHit(0);
     }
 
     @Override
     public void takeHit(int damage) {
         health = 0;
-    }
-
-    @Override
-    public int getDamage() {
-        return this.damage;
     }
 }

@@ -1,4 +1,4 @@
-package lab9;
+package efs.task.oop;
 
 public abstract class Monster implements Fighter {
     private int health;
